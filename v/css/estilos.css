@@ -1,0 +1,462 @@
+:root{
+	--adm:#160053;
+	--dir:#002240;
+	--sec:#0087FF;
+}
+html{
+	--color-e: transparent;
+	--color-dark-tabla: rgba(255,255,255, .1);
+}
+.eliminado{
+	color: var(--danger) !important;
+}
+.activo{
+	color: var(--success) !important;
+}
+ *,
+ *::before,
+ *::after{
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+
+th, td{
+	cursor: default;
+}
+body{
+	font-size: 16px;
+	font-family: arial;
+}
+body.adm{
+	--color-e: #160053;
+}
+body.dir{
+	--color-e: #002240;
+}
+body.sec{
+	--color-e: #0087FF;
+}
+.dark-title-i-r{
+	background: rgba(255,255,255, .4);
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.barra-lateral{
+
+	min-width: 200px;
+	min-height: 100vh;
+	padding: 0;
+	color: #fff;
+	background-color: var(--color-e);
+}
+.barra-lateral .logo{
+	background: #0275db;
+	margin-bottom: 2px;
+}
+.barra-lateral button{
+	transition: .3s;
+	color: #fff;
+	background: var(--color-e);
+	cursor: pointer;
+}
+.barra-lateral .logo h2{
+	font-size: 20px;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 300;
+	margin: 0;
+	cursor: default;
+}
+.barra-lateral .menu button{
+	display: block;
+	padding: 20px;
+	font-weight: 500;
+	border-bottom: 1px solid rgba(0,0,0,.35);
+	width: 100%;
+	text-align: left;
+}
+.label-regis-cer{
+	cursor: pointer;
+}
+
+.titulo-crear-cer{
+	cursor: default;
+}
+.barra-lateral .menu button:hover{
+	background: #35ae6b;
+	text-decoration: none;
+}
+.barra-lateral .menu button i{
+	margin-right: 20px;
+	font-weight: normal;
+}
+.logout{
+	background: #545454;
+}
+.c{
+	flex: 0 0 100%;
+	
+}
+.main-principal-logout{
+	cursor: default;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+input[type="radio"]{
+	cursor: pointer;
+}
+.login_a{
+	margin-top: 20px;
+	transition: .1s;
+	cursor: default;
+	font-size: 20px;
+	color: #0096FF;
+}
+.titulos-i-r-a{
+	padding-left: 30px;
+	color: var(--color-e);
+	cursor: default;
+}
+.titulo-v-d-u{
+	color: var(--color-e);
+	cursor: default;
+}
+.btn-regresar-login{
+	font-size: 20px;
+	transition: .3s;
+	background: none;
+	color: #00F6FF;
+}
+.btn-regresar-login:hover{
+	cursor: pointer;
+	color: #00FF12;
+}
+.main {
+	padding-top: 30px;
+	justify-content: space-around;
+	position: relative;
+	display: flex;
+
+}
+.menus-secundarios{
+	margin-top: 20px;
+}
+
+.dark-inputs{
+  background: rgba(0,0,0, .3);
+  color: #fff;
+  transition: .3s;
+}
+.dark-inputs:focus{
+  color: #fff;
+  background: rgba(0,0,0, .3);
+}
+
+.menus-secundarios::after{
+	content: "";
+	display: block;
+	border-bottom: 2px solid #0275d8;
+	width: 15%;
+	margin: 0 auto;
+}
+.menus-secundarios-admin{
+	margin-top: 20px;
+}
+.menus-secundarios-admin::after{
+	content: "";
+	display: block;
+	border-bottom: 2px solid #0275d8;
+	width: 35%;
+	margin: 0 auto;
+}
+.main-letra{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: default;
+	color: rgba(151, 151, 151, .6);
+}
+
+.main .centro {
+	display: grid;
+	padding-bottom: 10px;
+	box-shadow: 0 0 2.5px 0 #000;
+	background: #fff;
+	padding-left: 10px;
+	align-items: center;
+}
+.buscar-cer{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-group{
+	width: auto;
+	height: auto;
+	padding: 1em;
+	margin: 0;
+}
+
+.form-group form {
+	margin-bottom: 0;
+}
+.buscar-cer input{
+	background: var(--color-e);
+	padding: 10px;
+	border: 3px solid var(--color-e);
+	border-radius: 5px;
+	color: var(--light);
+	cursor: pointer;
+	transition: .3s;
+}
+.buscar-cer label{
+	cursor: pointer;
+}
+.buscar-cer input:hover{
+	color: #fff;
+	background: var(--gray)!important;
+}
+
+.search-cer-button{
+	margin-left: 10px;
+	padding: 8px;
+	border-radius: 4px;
+	color: var(--light);
+	background: var(--color-e);
+	transition: .4s;
+	cursor: pointer;
+	width: 100px;
+}
+.boton-search-fecha{
+	margin-left: 10px;
+	padding: 8px;
+	border-radius: 4px;
+	color: var(--light);
+	background: var(--color-e);
+	transition: .4s;
+	cursor: pointer;
+	width: 100px;
+}
+.buscar-cer button:hover{
+	color: #00ff1c;
+}
+.buscar-cer .h1{
+	cursor: default;
+}
+.buscar-cer small{
+	cursor: default;
+}
+hr{
+	background: var(--color-e);
+}
+.form-inline{
+	margin-bottom: 60px;
+}
+.btn-editar-usuario, .btn-delete-usuario, .btn-activar-usuario, .btn-generar-certificado, .btn-generar-acta-buena-conducta, .btn-generar-constancia-prosecucion, .btn-modifcar-estudiante, .btn-ver-acciones{
+	background: rgba(51,51,51, .9);
+	transition: .3s;
+	color: #fff;
+}
+.btn-modifcar-estudiante:hover{
+	color: var(--success)!important;
+	cursor: pointer;
+}
+.btn-generar-certificado:hover{
+	color: var(--blue)!important;
+	cursor: pointer;
+}
+.btn-generar-acta-buena-conducta:hover{
+	color: var(--orange)!important;
+	cursor: pointer;
+}
+.btn-generar-constancia-prosecucion:hover{
+	color: var(--primary)!important;
+	cursor: pointer;
+}
+.btn-editar-usuario:hover{
+	color: #18FF00;
+	cursor: pointer;
+}
+.btn-activar-usuario:hover{
+	color: var(--cyan) !important;
+	cursor: pointer;
+}
+.btn-ver-acciones:hover{
+	color: var(--blue) !important;
+	cursor: pointer;
+}
+.btn-delete-usuario:hover{
+	color: red;
+	cursor: pointer;
+}
+.title-crear-usuario{
+	margin-top: 10px;
+}
+/* mediaquery */
+@media screen and (max-width: 1300px) {
+	.col-estadisticas-doc{
+		width: 100px;
+	}
+	
+	.inicio-home{
+		align-items: center;
+	}
+	.titulo-crear-cer{
+		margin-top: 50px;
+	}
+	.barra-lateral {
+		min-width: auto;
+	}
+
+	.barra-lateral .logo {
+		display: none;
+	}
+
+	.barra-lateral .menu button span {
+		display: none;
+	}
+
+	.barra-lateral .menu button i {
+		margin:0;
+	}
+}
+@media screen and (max-width: 1200px) {
+
+	.cargar_barras{
+		width: 920px;
+		max-width: 103%;
+	}
+
+}
+@media screen and (max-width: 575px) {
+	.col-estadisticas-doc{
+		width: 100px;
+	}
+	.title-crear-usuario{
+		margin-top: 0;
+	}
+	.buscar-cer{
+		margin-top: 20px;
+	}
+	.menus-secundarios{
+		margin-top: 0;
+	}
+	.menus-secundarios-admin{
+		margin-top: 0;
+	}
+	.menus-secundarios-admin::after{
+		width: 55%;
+	}
+	.barra-lateral {
+		min-height: auto;
+	}
+	.titulos-i-r-a{
+		padding-left: 10px;
+	}
+	.men{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.titulo-crear-cer{
+		margin-top: 20px;
+	}
+	.main-letra-pri{
+		color: rgba(151, 151, 151, .6);
+	}
+	.barra-lateral .menu button {
+		padding: 15px;
+		width: 50px;
+		display: inline-block;
+		border-bottom: none;
+	}
+
+	.main .widget form button {
+		width: 100%;
+	}
+	.main .centro{
+		padding-bottom: 0;
+		padding-top: 0;
+		min-height: 450px;
+	}
+	.main {
+		min-height: 400px;
+	}
+	.search-cer-button, .boton-search-fecha{
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 374px) {
+	.col-estadisticas-doc{
+		width: 300px;
+	}
+	.buscar-cer .h1 {
+		font-size: 30px;
+	}
+	.buscar-cer small{
+		font-size: 60%;
+	}
+	.buscar-cer input{
+		text-align: center;
+	}
+	.search-cer-button{
+		margin-left: 0;
+	}
+	.boton-search-fecha{
+		margin-left: -10px;
+	}
+	.barra-lateral .menu button{
+		padding: 15px;
+	}
+}
+
+/*    SUBIR-BOTON    */
+
+.subir-boton img{
+	color: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	position: fixed;
+	bottom: .1em;
+	right: .1em;
+	transform: translate(-50%, -50%) scale(0);
+	transition: .2s;
+	background-color: var(--color-e);
+}
+.show{
+	z-index: 10;
+}
+.show .subir-boton{
+	animation: popup .3s ease-in-out;
+	width: 6.6rem;
+	height: 6.6rem;
+	z-index: 11;
+}
+.show img{
+	transform: translate(-50%, -50%) scale(1);
+}
+@keyframes popup{
+	0%{
+		width: 0rem;
+		height: 0rem;
+	}
+	50%{
+		width: 8rem;
+		height: 8rem;
+	}
+	100%{
+		width: 6.6rem;
+		height: 6.6rem;	
+	}
+}

@@ -1,0 +1,244 @@
+ *,
+ *::before,
+ *::after{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.formulario{
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.login-caja {
+  max-width: 350px;
+  min-width: 200px;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 20px 30px;
+  padding-top: 70px;
+  z-index: 1001;
+  max-height: 400px;
+  position: relative;
+  box-shadow: 0 0 10px #000;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.login-caja::before {
+  content: "";
+  background: rgba(255,255,255,0.3) url('../img/user.png');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: calc(-45px);
+  left: calc(50% - 50px);
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: block;
+}
+
+.login-caja h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-caja label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+.login-caja input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-caja input[type="text"], .login-caja input[type="password"] {
+  border: none;
+  background: transparent;
+  border-bottom: 1.5px solid rgba(255,255,255,0.1);
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  transition: .3s;
+  cursor: pointer;
+}
+label{
+  cursor: pointer;
+}
+
+.login-caja input[type="text"]:focus, .login-caja input[type="password"]:focus{
+  border-bottom: 1.5px solid #00F0FF;
+}
+
+.boton-submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #0087FF;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.boton-submit:hover {
+  cursor: pointer;
+  background: #0FD4DF;
+}
+
+.login-caja a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.login-caja a:hover {
+  color: #298186;
+}
+
+.title__container{
+  margin-left: 150px;
+  max-width: 420px;
+  line-height: 20px;
+  color: #FFF;
+  z-index: 1000;
+  width: 45%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.title__container .title{
+  font-size: 2rem;
+  font-weight: normal;
+  position: relative;
+  line-height: 65px;
+}
+
+.title__container .title::after{
+  content: "";
+  display: block;
+  border-bottom: 2px solid #0087FF;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 575px){
+  .title{
+    display: none;
+  }
+  .title__container{
+    display: none;
+  }
+
+  .login-caja{
+    width: 90%;
+    height: 90%;
+    margin-left: 0;
+    font-size: 20px;
+    border-radius: 0;
+  }
+  .login-caja input[type="text"], .login-caja input[type="password"]{
+    font-size: 20px;
+  }
+  .boton-submit{
+    font-size: 25px;
+  }
+  .login-caja .img_user{
+    opacity: 40%;
+    top: 30px;
+    left: calc(75% - 50px);
+  }
+  .login-caja h1 {
+    text-align: left;
+    font-size: 30px;
+  }
+  .login-caja a{
+    font-size: 20px;
+  }
+}
+
+/* ------------ Slide ------------- */
+
+.container-sl{
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  overflow: hidden;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /*border: 2px solid #000;*/
+}
+.slide__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  visibility: hidden;
+  z-index: 10;
+  background-size: cover;
+  background-position: 25% center;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 1.3s ease-in-out 0.1s;
+}
+.slide__item:nth-child(1) {
+  background-image: url("../img/1.jpg");
+}
+.slide__item:nth-child(2) {
+  background-image: url("../img/2.jpg");
+}
+.slide__item:nth-child(3) {
+  background-image: url("../img/3.jpg");
+}
+/*.slide__item:nth-child(4) {
+  background-image: url("../../static/img/img_slider4.jpg");
+}*/
+.slide__item.is-active--prev {
+  z-index: 20;
+  visibility: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.slide__item.is-active {
+  z-index: 30;
+  visibility: visible;
+  will-change: clip-path;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

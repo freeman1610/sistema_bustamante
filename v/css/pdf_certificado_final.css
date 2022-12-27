@@ -1,0 +1,20 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+p, label, span, table{
+	font-family: 'Arial';
+}
+.h2{
+	font-family: 'Arial';
+	font-weight: bolder;
+}
+img{
+	height: 150px;
+	width: 150px;
+}
+.main-documento{
+	text-align: justify;
+	font-size: 16px;
+}

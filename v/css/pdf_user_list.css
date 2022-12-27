@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial';
+}
+html{
+	margin-top: 30px;
+}
+.text-description{
+	padding-left: 15px;
+}
+.text-description-sub{
+	padding-left: 10px;
+}
+table{
+	border-collapse: collapse;
+}
+.b-r{
+	border-radius: 5px;
+}
+th,td{
+	padding: 10px;
+}
+thead{
+	color: #fff;
+}
+tr:nth-child(even){
+	background-color: #f2f8f2
+}
